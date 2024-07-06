@@ -1,0 +1,441 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <title>ONLINE FOOD DELIVERY</title>
+</head>
+<body>
+   
+    <!-- sidebar -->
+    <div class = "sidebar">
+        <!-- logo -->
+         <div class="sidebar-heading">
+            <img src="C:\Users\DELCY LARA\Downloads\htmlproj\sidebar.jpg" class="sidebar-image">
+            <h1 class="logo">ONLINE FOOD DELIVERY </h1>
+         </div>
+        
+        <!-- menu list -->
+        <div class="sidebar-menus">
+            <a href="#"><ion-icon name="storefront-outline"></ion-icon>HOME</a>
+            <a href="#"><ion-icon name="receipt-outline"></ion-icon>RECEIPT</a>
+            <a href="#"><ion-icon name="wallet-outline"></ion-icon>PAYMENT</a>
+            <a href="#"><ion-icon name="notifications-outline"></ion-icon>NOTIFICATION</a>
+            <a href="#"><ion-icon name="chatbubbles-outline"></ion-icon>CONTACT</a>
+            <a href="#"><ion-icon name="settings-outline"></ion-icon>SETTING</a>
+        </div>
+        
+         <!-- logout -->
+        <div class="sidebar-logout">
+            <a href="#"><ion-icon name="log-out-outline"></ion-icon>Logout</a>
+        </div>
+     </div>
+     
+    <!-- main -->
+    <div class="main">
+        <div class="main-navbar">
+            <ion-icon class="menu-toggle" name="menu-outline"></ion-icon>
+            <div class="search">
+                <input type="text" placeholder="Hungry? Search your favourites!">
+                <button class="searchbutton">SEARCH</button>
+            </div>
+            <div class="profile">
+                <a class="cart" href="#" onclick="toggleCartPopup()">
+                    <ion-icon name="cart-outline"></ion-icon>
+                    <span class="cart-count" id="cart-count">0</span>
+                </a>
+                
+                <a class="user" href="#"><ion-icon name="person-outline"></ion-icon></a>
+            </div>
+        </div>
+        <!-- shopping cart -->
+        <div id="cart-popup" class="cart-popup">
+            <h4>Shopping Cart</h4>
+            <table id="cart-items">
+                <thead>
+                    <tr>
+                        <th>ITEM</th>
+                        <th>#</th>
+                        <th>PRICE($)</th>
+                        <th>TOTAL($)</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <p>Total($)<span id ="cart-total">0.00</span></p>
+            <a class="cart-close" onclick="closeCart()"><ion-icon name="close-circle-outline"></ion-icon></a>
+        </div>
+        <div class="main-highlight">
+            <div class="main-header">
+                <h2 class="main-title">Our Signature Dishes!</h2>
+                <div class="main-arrow">
+                    <ion-icon class="back" name="chevron-back-circle-outline"></ion-icon>
+                    <ion-icon class="next" name="chevron-forward-circle-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="highlight-wrapper">
+                <div class="highlight-card">
+                    <img class="highlight-img" src="C:\Users\DELCY LARA\Downloads\htmlproj\muttonbriyani.jpg">
+                    <div class="highlight-desc">
+                        <h4>Mutton Briyani</h4>
+                        <p>INR 250</p>
+                        
+                    </div>
+                </div>
+                <div class="highlight-card">
+                    <img class="highlight-img" src="C:\Users\DELCY LARA\Downloads\htmlproj\nonvegmeals.jpg">
+                    <div class="highlight-desc">
+                        <h4>Non Veg Meals</h4>
+                        <p>INR 180</p>
+                        
+                    </div>
+                </div>
+                <div class="highlight-card">
+                    <img class="highlight-img" src="C:\Users\DELCY LARA\Downloads\htmlproj\muttonbals.jpg">
+                    <div class="highlight-desc">
+                        <h4>Mutton Keema Balls</h4>
+                        <p>INR 250</p>
+                        
+                    </div>
+                </div>
+                <div class="highlight-card">
+                    <img class="highlight-img" src="C:\Users\DELCY LARA\Downloads\htmlproj\crabmasala.jpg">
+                    <div class="highlight-desc">
+                        <h4>Pepper Crab Masala</h4>
+                        <p>INR 250</p>
+                        
+                    </div>
+                </div>
+                
+
+            </div>
+
+        </div>
+        <div class="main-menus">
+            <div class="main-filter">
+                <div>
+                    <h2 class="main-title">Menu<br>Category</h2>
+                    <div class="main-arrow">
+                        <ion-icon class="back-menus" name="chevron-back-circle-outline"></ion-icon>
+                        <ion-icon class="forward-menus" name="chevron-forward-circle-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="filter-wrapper">
+                    <div class="filter-card">
+                        <div class="filter-icon">
+                            <ion-icon name="restaurant-outline"></ion-icon>
+                        </div>
+                        <h4>South Indian</h4>
+                    </div>
+                    <div class="filter-card">
+                        <div class="filter-icon">
+                            <ion-icon name="fast-food-outline"></ion-icon>
+                        </div>
+                        <h4>Chinese</h4>
+                    </div>
+                    <div class="filter-card">
+                        <div class="filter-icon">
+                            <ion-icon name="fish-outline"></ion-icon>
+                        </div>
+                        <h4>Starters</h4>
+                    </div>
+                    <div class="filter-card">
+                        <div class="filter-icon">
+                            <ion-icon name="wine-outline"></ion-icon>
+                        </div>
+                        <h4>Deserts</h4>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            <hr class="divider">
+            <div class="main-detail">
+                <h2 class="main-title">Choose Order</h2>
+                <div class="detail-wrapper">
+                    <div class="detail-card">
+                        <img class="detail-img" src="C:\Users\DELCY LARA\Downloads\htmlproj\vegsoup.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Veg Soup</h4>
+                                <p class="detail-sub">Warm up with our comforting Veg Soup, packed with hearty vegetables and aromatic spices, perfect for a nourishing meal.</p>
+                                <p class="price">INR 100.00</p>
+                                <button class="add-to-cart-btn" onclick="addToCart('Veg Soup',100.00)">Add to Cart</button>
+                            </div>
+                            <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <img class="detail-img" src="C:\Users\DELCY LARA\Downloads\htmlproj\chickensoup.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Naatu Kozhi Soup</h4>
+                                <p class="detail-sub">Warm your soul with our comforting Naatu Kozhi Soup, made with tender country chicken and nourishing spices.</p>
+                                <p class="price">INR 110.00</p>
+                                <button class="add-to-cart-btn" onclick="addToCart('Naatu Kozhi Soup',110.00)">Add to Cart</button>
+                            </div>
+                            <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <img class="detail-img" src="C:\Users\DELCY LARA\Downloads\htmlproj\muttonbriyani.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Mutton Briyani</h4>
+                                <p class="detail-sub">Indulge in the rich, hearty flavors of our mutton biryani, slow-cooked to perfection for an unforgettable dining experience.</p>
+                                <p class="price">INR 250.00</p>
+                                <button class="add-to-cart-btn" onclick="addToCart('Mutton Briyani',250.00)">Add to Cart</button>
+                            </div>
+                            <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+
+                        </div>
+                        
+                    </div>
+                    <div class="detail-card">
+                        <img class="detail-img" src="C:\Users\DELCY LARA\Downloads\htmlproj\chickenbriyani.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Chicken Briyani</h4>
+                                <p class="detail-sub">Savor the aromatic blend of spices and succulent chicken in every flavorful bite of our chicken biryani.</p>
+                                <p class="price">INR 230.00</p>
+                                <button class="add-to-cart-btn" onclick="addToCart('Chicken Briyani',230.00)">Add to Cart</button>
+                            </div>
+                            <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <img class="detail-img" src="C:\Users\DELCY LARA\Downloads\htmlproj\fullmeals.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Veg Meals</h4>
+                                <p class="detail-sub">Experience pure culinary bliss with our wholesome Veg Meals, featuring a delectable assortment of nutritious vegetables and aromatic spices</p>
+                                <p class="price">INR 150.00</p>
+                                <button class="add-to-cart-btn" onclick="addToCart('Veg Meals',150.00)">Add to Cart</button>
+                            </div>
+                            <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <img class="detail-img" src="C:\Users\DELCY LARA\Downloads\htmlproj\nonvegmeals.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4> Non Veg Meals</h4>
+                                <p class="detail-sub">Indulge in a feast for the senses with our Non-Veg Meals, offering a tantalizing array of meaty delights and flavorful accompaniments.</p>
+                                <p class="price">INR 180.00</p>
+                                <button class="add-to-cart-btn" onclick="addToCart('Non Veg Meals',180.00)">Add to Cart</button>
+                            </div>
+                            <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <img class="detail-img" src="C:\Users\DELCY LARA\Downloads\htmlproj\friedrice.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4> Veg Fried Rice</h4>
+                                <p class="detail-sub">Delight in the harmony of colorful veggies and aromatic rice in our delectable veg fried rice, a wholesome and flavorful choice for any meal.</p>
+                                <p class="price">INR 150.00</p>
+                                <button class="add-to-cart-btn" onclick="addToCart('Veg Fried Rice',150.00)">Add to Cart</button>
+                            </div>
+                            <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <img class="detail-img" src="C:\Users\DELCY LARA\Downloads\htmlproj\chickentriplerice.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Chicken Triple  Rice</h4>
+                                <p class="detail-sub">Indulge in the ultimate comfort meal with our chicken triple rice - succulent chicken, fluffy rice, and a perfectly cooked omelet.</p>
+                                <p class="price">INR 200.00</p>
+                                <button class="add-to-cart-btn" onclick="addToCart('Chicken Triple Rice',200.00)">Add to Cart</button>
+                            </div>
+                            <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-card">
+                        <img class="detail-img" src="C:\Users\DELCY LARA\Downloads\htmlproj\hakka_noodles.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Chicken Noodles</h4>
+                                <p class="detail-sub">Satisfy your cravings with our savory Chicken Noodles, stir-fried to perfection with a medley of fresh vegetables and tender chicken.</p>
+                                <p class="price">INR 180.00</p>
+                                <button class="add-to-cart-btn" onclick="addToCart('Chicken Noodles',180.00)">Add to Cart</button>
+                            </div>
+                            <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <img class="detail-img" src="C:\Users\DELCY LARA\Downloads\htmlproj\alfredo.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Chicken Alfredo Pasta</h4>
+                                <p class="detail-sub">Satisfy your cravings with our creamy Chicken Alfredo Pasta, tossed in rich alfredo sauce and topped with tender chicken pieces.</p>
+                                <p class="price">INR 230.00</p>
+                                <button class="add-to-cart-btn" onclick="addToCart('Chicken Alfredo Pasta',230.00)">Add to Cart</button>
+                            </div>
+                            <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <img class="detail-img" src="C:\Users\DELCY LARA\Downloads\htmlproj\chicken65.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Chicken 65</h4>
+                                <p class="detail-sub">Indulge in the crispy and flavorful goodness of our Chicken 65, a popular South Indian dish that's sure to please your palate</p>
+                                <p class="price">INR 160.00</p>
+                                <button class="add-to-cart-btn" onclick="addToCart('Chicken 65',160.00)">Add to Cart</button>
+                            </div>
+                            <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <img class="detail-img" src="C:\Users\DELCY LARA\Downloads\htmlproj\chillichicken.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Chilli Chicken</h4>
+                                <p class="detail-sub">Experience a fiery burst of flavor with our tantalizing chili chicken, packed with spices and zest for a truly unforgettable dish.</p>
+                                <p class="price">INR 180.00</p>
+                                <button class="add-to-cart-btn" onclick="addToCart('Chilli Chicken',180.00)">Add to Cart</button>
+                            </div>
+                            <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="detail-card">
+                        <img class="detail-img" src="C:\Users\DELCY LARA\Downloads\htmlproj\muttonbals.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Mutton Keema Balls(6pcs)</h4>
+                                <p class="detail-sub">Delight in the juicy tenderness of our Mutton Balls, seasoned to perfection and bursting with flavor</p>
+                                <p class="price">INR 250.00</p>
+                                <button class="add-to-cart-btn" onclick="addToCart('Mutton Keema Balls',250.00)">Add to Cart</button>
+                            </div>
+                            <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <img class="detail-img" src="C:\Users\DELCY LARA\Downloads\htmlproj\fishfry.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Fish Fry(3pcs)</h4>
+                                <p class="detail-sub">Delight your taste buds with our crispy and flavorful Fish Fry, featuring fresh fish fillets coated in herbs and spices, fried to perfection.</p>
+                                <p class="price">INR 150.00</p>
+                                <button class="add-to-cart-btn" onclick="addToCart('Fish Fry',150.00)">Add to Cart</button>
+                            </div>
+                            <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <img class="detail-img" src="C:\Users\DELCY LARA\Downloads\htmlproj\prawnmasala.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Prawn Masala</h4>
+                                <p class="detail-sub">Savor the rich flavors of our Prawn Masala, a delectable dish bursting with succulent prawns and aromatic spices.</p>
+                                <p class="price">INR 220.00</p>
+                                <button class="add-to-cart-btn" onclick="addToCart('Prawn Masala',220.00)">Add to Cart</button>
+                            </div>
+                            <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <img class="detail-img" src="C:\Users\DELCY LARA\Downloads\htmlproj\crabmasala.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Pepper Crab Masala</h4>
+                                <p class="detail-sub">Experience the bold and spicy flavors of our Pepper Crab Masala, a tantalizing treat for seafood lovers.</p>
+                                <p class="price">INR 250.00</p>
+                                <button class="add-to-cart-btn" onclick="addToCart('Pepper Crab Masala',250.00)">Add to Cart</button>
+                            </div>
+                            <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-card">
+                        <img class="detail-img" src="C:\Users\DELCY LARA\Downloads\htmlproj\breadhalwa.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Bread Halwa</h4>
+                                <p class="detail-sub">Treat yourself to the comforting flavors of our Bread Halwa, a classic Indian dessert made with bread, ghee, and aromatic spices.</p>
+                                <p class="price">INR 40.00</p>
+                                <button class="add-to-cart-btn" onclick="addToCart('Bread Halwa',40.00)">Add to Cart</button>
+                            </div>
+                            <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-card">
+                        <img class="detail-img" src="C:\Users\DELCY LARA\Downloads\htmlproj\lavacake.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Choco Lava Cake</h4>
+                                <p class="detail-sub">Indulge in pure chocolate decadence with our irresistible Choco Lava Cake, oozing with molten chocolate from the inside.</p>
+                                <p class="price">INR 80.00</p>
+                                <button class="add-to-cart-btn" onclick="addToCart('Choco Lava Cake',80.00)">Add to Cart</button>
+                            </div>
+                            <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <img class="detail-img" src="C:\Users\DELCY LARA\Downloads\htmlproj\butterscotch.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Butterscotch</h4>
+                                <p class="detail-sub">Indulge in Butterscotch Bliss! Enjoy the rich, buttery sweetness and caramel notes in every bite of our handcrafted butterscotch treats.</p>
+                                <p class="price">INR 50.00</p>
+                                <button class="add-to-cart-btn" onclick="addToCart('Butterscotch',50.00)">Add to Cart</button>
+                            </div>
+                            <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <img class="detail-img" src="C:\Users\DELCY LARA\Downloads\htmlproj\gulab.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Gulab with Vanilla<br> New Edition! </h4>
+                                <p class="detail-sub">Experience the perfect blend of tradition and sweetness with our Gulab (Rose) flavored dessert paired with creamy vanilla</p>
+                                <p class="price">INR 70.00</p>
+                                <button class="add-to-cart-btn" onclick="addToCart('Gulab with Vanilla',70.00)">Add to Cart</button>
+                            </div>
+                            <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <img class="detail-img" src="C:\Users\DELCY LARA\Downloads\htmlproj\potkulfi.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Pot Kulfi</h4>
+                                <p class="detail-sub">Cool down with our delightful Pot Kulfi, a rich and creamy Indian frozen dessert served in an earthen pot.</p>
+                                <p class="price">INR 50.00</p>
+                                <button class="add-to-cart-btn" onclick="addToCart('Pot Kulfi',50.00)">Add to Cart</button>
+                            </div>
+                            <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <img class="detail-img" src="C:\Users\DELCY LARA\Downloads\htmlproj\mojito.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Mojito</h4>
+                                <p class="detail-sub">Refresh yourself with our zesty Mojito, a perfect combination of lime, mint, and a hint of sweetness, served over ice.</p>
+                                <p class="price">INR 65.00</p>
+                                <button class="add-to-cart-btn" onclick="addToCart('Mojito',65.00)">Add to Cart</button>
+                            </div>
+                            <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+                        </div>
+                    </div>
+                    
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<!-- javascript -->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+ <script src="app.js"></script>
+</html>
